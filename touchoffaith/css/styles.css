@@ -1,0 +1,535 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fumbh Sans', sans-serif;
+}
+/*Navigation bar start*/
+.navbar {
+    background: #e8d2bb;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* Touch of Faith */
+#navbar__logo {
+    background-color: #000;
+    background-image: linear-gradient(to top, #ffe9d3 0%, #000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem; 
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+/* See systles, about Faith*/
+.navbar__links {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+/* Login Button start*/
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #000;
+}
+
+.button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Allows screen to change with window size */
+@media screen and (max-width: 1600px) {
+    .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1300px;
+            padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #ffe9d3;
+    }
+
+    .navbar__menu.active{
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #moblie-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #moblie-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #moblie-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* Navigation bar end*/
+    /* Main screen starts*/
+    .main {
+        background-color: #fff;
+    }
+
+    /* Main outline of wbsite*/
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-self: center;
+        margin: 0 auto;
+        height: 90vh;
+        background-color: #fff;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0 50px;
+    }
+
+    /* Cosmentolist */
+    .main__content h1 {
+        font-size: 4rem;
+        background-color: #ff8177;
+        background-image: linear-gradient(to top,#000 0%, #e8d2bb 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    /* Salon */
+    .main__content h2 {
+        font-size: 4rem;
+        background-color: #ff8177;
+        background-image: linear-gradient(to top,#e8d2bb 0%, #000 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    /* Beauty, cosmetic & personal care */
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: 700; 
+        color: #000; 
+    }
+
+    /* Book appointments button */
+    .main__btn {
+        font-size: 1rem;
+        background-image: linear-gradient(to top, #e8d2bb 0%, #e8d2bb 100%);
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        margin-top: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.35s;
+        outline: none;
+    }
+
+    .main__btn {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .main__btn after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #fff;
+        transition: all 0.35s;
+        border-radius: 4px;
+    }
+
+    .main__btn:hover {
+        color: #fff;
+    }
+
+    .main__btn:hover:after {
+        width: 100%;
+    }
+    /* Book appointment buttons ends */
+
+    .main__img--container {
+        text-align: center;
+    }
+
+    #main__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* --- Profile Screen --- */
+
+    /* Allows main content to adjust with window */
+
+}
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 1 rem;
+        font-size: 1.5 rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 2 rem;
+        font-size: 1.5 rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+.footer__container {
+    background-color: #e8d2bb;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: colum;
+    justify-content: left;
+    align-items: left;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: left;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__container h2 {
+    font-size: 2rem;
+    background-color: #000;
+    background-size: 100%;
+    justify-content: left;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+/*End of footer*/
+
+.profile {
+    background-color: #fff;
+}
+
+/* Main outline of wbsite*/
+.profile__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+/* Cosmentolist */
+.profile__content h1 {
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#000 0%, #e8d2bb 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+/* Salon */
+.profile__content h2 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#e8d2bb 0%, #000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.profile__content h3 {
+    font-size: 1rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#e8d2bb 0%, #000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+/* Beauty, cosmetic & personal care */
+.profile__content p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500; 
+    color: #000; 
+}
+
+/* Book appointments button */
+.profile__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #e8d2bb 0%, #e8d2bb 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.profile__btn {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile__img--container {
+    text-align: right;
+    position: right;
+}
+
+/**/
+
+.main__left {
+    background-color: #fff;
+}
+
+/* Main outline of wbsite*/
+.main__container__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: right;
+    justify-self: right;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+/* Cosmentolist */
+.main__content__left h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#000 0%, #e8d2bb 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+/* Salon */
+.main__content__left h2 {
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#e8d2bb 0%, #000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.main__content__left h3 {
+    font-size: 1rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#e8d2bb 0%, #000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+/* Beauty, cosmetic & personal care */
+.main__content__left p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700; 
+    color: #000; 
+}
